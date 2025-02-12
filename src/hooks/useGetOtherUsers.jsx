@@ -10,15 +10,16 @@ const useGetOtherUsers = () => {
     useEffect(() => {
         const fetchOtherUsers = async () => {
             try {
-                axios.defaults.withCredentials = true;
-                const res = await axios.get(`${BASE_URL}/api/v1/user`);
-                // store
-                console.log("other users -> ",res);
+                const res = await axios.get(`${BASE_URL}/api/v1/user`, {
+                    withCredentials: true // Ensure cookies are sent
+                });
+                console.log("other users -> ", res.data);
                 dispatch(setOtherUsers(res.data));
             } catch (error) {
-                console.log(error);
+                console.log("Error fetching other users:", error);
             }
         }
+        
         fetchOtherUsers();
     }, [])
 
