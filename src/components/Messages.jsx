@@ -3,9 +3,9 @@ import Message from './Message'
 import useGetMessages from '../hooks/useGetMessages';
 import { useSelector } from "react-redux";
 import useGetRealTimeMessage from '../hooks/useGetRealTimeMessage';
+import { BASE_URL } from '..';
 
 const Messages = () => {
-    const BASE_URL = "https://chat-app-backend-beryl.vercel.app"
     useGetMessages();
     useGetRealTimeMessage();
     const { messages } = useSelector(store => store.message);

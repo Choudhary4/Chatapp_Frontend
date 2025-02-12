@@ -1,9 +1,11 @@
 import React from 'react'
 import { useDispatch,useSelector } from "react-redux";
 import { setSelectedUser } from '../redux/userSlice';
+import { BASE_URL } from '..';
+
+
 
 const OtherUser = ({ user }) => {
-    const BASE_URL = "https://chat-app-backend-beryl.vercel.app"
     const dispatch = useDispatch();
     const {selectedUser, onlineUsers} = useSelector(store=>store.user);
     const isOnline = onlineUsers?.includes(user._id);

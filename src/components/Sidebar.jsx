@@ -7,10 +7,10 @@ import {useNavigate} from "react-router-dom";
 import {useSelector, useDispatch} from "react-redux";
 import { setAuthUser, setOtherUsers, setSelectedUser } from '../redux/userSlice';
 import { setMessages } from '../redux/messageSlice';
+import { BASE_URL } from '..';
 
  
 const Sidebar = () => {
-    const BASE_URL = "https://chat-app-backend-beryl.vercel.app"
     const [search, setSearch] = useState("");
     const {otherUsers} = useSelector(store=>store.user);
     const dispatch = useDispatch();

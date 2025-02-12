@@ -3,10 +3,11 @@ import { IoSend } from "react-icons/io5";
 import axios from "axios";
 import {useDispatch,useSelector} from "react-redux";
 import { setMessages } from '../redux/messageSlice';
+import { BASE_URL } from '..';
+
 
 
 const SendInput = () => {
-    const BASE_URL = "https://chat-app-backend-beryl.vercel.app"
     const [message, setMessage] = useState("");
     const dispatch = useDispatch();
     const {selectedUser} = useSelector(store=>store.user);

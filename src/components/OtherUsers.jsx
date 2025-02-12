@@ -2,10 +2,10 @@ import React from 'react'
 import OtherUser from './OtherUser';
 import useGetOtherUsers from '../hooks/useGetOtherUsers';
 import {useSelector} from "react-redux";
+import { BASE_URL } from '..';
 
 
 const OtherUsers = () => {
-    const BASE_URL = "https://chat-app-backend-beryl.vercel.app"
     // my custom hook
     useGetOtherUsers();
     const {otherUsers} = useSelector(store=>store.user);

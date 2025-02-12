@@ -3,9 +3,10 @@ import SendInput from './SendInput'
 import Messages from './Messages';
 import { useSelector,useDispatch } from "react-redux";
 import { setSelectedUser } from '../redux/userSlice';
+import { BASE_URL } from '..';
+
 
 const MessageContainer = () => {
-    const BASE_URL = "https://chat-app-backend-beryl.vercel.app"
     const { selectedUser, authUser, onlineUsers } = useSelector(store => store.user);
     const dispatch = useDispatch();
 

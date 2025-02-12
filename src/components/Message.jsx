@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 import {useSelector} from "react-redux";
 import { useState } from 'react';
+import { BASE_URL } from '..';
 
 const Message = ({message}) => {
     const scroll = useRef();
-    const BASE_URL = "https://chat-app-backend-beryl.vercel.app"
+    
     const {authUser,selectedUser} = useSelector(store=>store.user);
 
     useEffect(()=>{
