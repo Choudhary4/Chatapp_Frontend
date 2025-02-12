@@ -8,7 +8,7 @@ import {useSelector,useDispatch} from "react-redux";
 import io from "socket.io-client";
 import { setSocket } from './redux/socketSlice';
 import { setOnlineUsers } from './redux/userSlice';
-import { BASE_URL } from '.';
+
 
 const router = createBrowserRouter([
   {
@@ -27,6 +27,7 @@ const router = createBrowserRouter([
 ])
 
 function App() { 
+  const BASE_URL = "https://chat-app-backend-beryl.vercel.app"
   const {authUser} = useSelector(store=>store.user);
   const {socket} = useSelector(store=>store.socket);
   const dispatch = useDispatch();
