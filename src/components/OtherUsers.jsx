@@ -6,13 +6,11 @@ import { BASE_URL } from '..';
 
 
 const OtherUsers = () => {
-    // my custom hook
-    useGetOtherUsers();
     const {otherUsers} = useSelector(store=>store.user);
     if (!otherUsers) return; // early return in react
      
     return (
-        <div className='overflow-auto flex-1'>
+        <div>
             {
                 otherUsers?.map((user)=>{
                     return (
@@ -20,7 +18,6 @@ const OtherUsers = () => {
                     )
                 })
             }
-            
         </div>
     )
 }

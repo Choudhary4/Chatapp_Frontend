@@ -11,7 +11,7 @@ import axios from 'axios';
 
 let persistor = persistStore(store);
 
-export const BASE_URL="https://chatapp-backend-txol.onrender.com"
+export const BASE_URL = "http://localhost:8080";
 
 // Configure axios defaults
 axios.defaults.withCredentials = true;
