@@ -53,7 +53,8 @@ function App() {
       }
     }
 
-  },[authUser, dispatch, socket]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[authUser]);
 
   return (
     <div className="h-screen w-screen bg-[#0a1014] flex items-center justify-center overflow-hidden relative">
