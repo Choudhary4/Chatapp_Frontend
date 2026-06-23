@@ -14,7 +14,7 @@ const ProfileDrawer = ({ isOpen, onClose }) => {
     const [profilePhoto, setProfilePhoto] = useState(authUser?.profilePhoto || "");
     const [about, setAbout] = useState(authUser?.about || "Available");
     const [isEditingName, setIsEditingName] = useState(false);
-    const [isEditingPhoto, setIsEditingPhoto] = useState(false);
+
     const [isEditingAbout, setIsEditingAbout] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [uploadingImage, setUploadingImage] = useState(false);
@@ -33,7 +33,7 @@ const ProfileDrawer = ({ isOpen, onClose }) => {
                 dispatch(updateAuthUser(res.data.user));
                 toast.success(res.data.message);
                 setIsEditingName(false);
-                setIsEditingPhoto(false);
+
                 setIsEditingAbout(false);
             }
         } catch (error) {

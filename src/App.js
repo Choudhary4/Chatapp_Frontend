@@ -3,7 +3,7 @@ import './App.css';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import HomePage from './components/HomePage';
 import Login from './components/Login';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import {useSelector,useDispatch} from "react-redux";
 import io from "socket.io-client";
 import { setSocket } from './redux/socketSlice';
@@ -53,7 +53,7 @@ function App() {
       }
     }
 
-  },[authUser]);
+  },[authUser, dispatch, socket]);
 
   return (
     <div className="h-screen w-screen bg-[#0a1014] flex items-center justify-center overflow-hidden relative">

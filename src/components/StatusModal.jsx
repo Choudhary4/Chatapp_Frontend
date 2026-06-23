@@ -156,7 +156,7 @@ const StatusModal = ({ isOpen, onClose }) => {
                 {activeStatus ? (
                     <div className="w-full max-w-md h-[80vh] flex flex-col">
                         <div className="flex items-center gap-3 p-4 bg-gradient-to-b from-black/50 to-transparent">
-                            <img src={activeStatus.userId?.profilePhoto} className="w-10 h-10 rounded-full" />
+                            <img src={activeStatus.userId?.profilePhoto} className="w-10 h-10 rounded-full" alt="Profile" />
                             <div className="text-white">
                                 <p className="font-medium">{activeStatus.userId?.fullName}</p>
                                 <p className="text-xs opacity-80">{new Date(activeStatus.createdAt).toLocaleTimeString()}</p>
@@ -194,7 +194,7 @@ const StatusModal = ({ isOpen, onClose }) => {
                         <button type="button" onClick={() => setActiveStatus(null)} className="text-white mr-2">
                             <BiArrowBack size={24} />
                         </button>
-                        <img src={activeStatus.userId?.profilePhoto} className="w-10 h-10 rounded-full" />
+                        <img src={activeStatus.userId?.profilePhoto} className="w-10 h-10 rounded-full" alt="Profile" />
                         <div className="text-white">
                             <p className="font-medium">{activeStatus.userId?.fullName}</p>
                             <p className="text-xs opacity-80">{new Date(activeStatus.createdAt).toLocaleTimeString()}</p>
